@@ -25,7 +25,7 @@
     :tags ["character"]
     (POST* "/show" []
       :return Message
-      :header-params [text :- String]
+      :body-params [text :- String]
       :summary "return the character description"
       (ok {:message (parser/show text)})))
 
