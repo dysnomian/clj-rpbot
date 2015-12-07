@@ -23,7 +23,7 @@
 
   (context* "/character" []
             :tags ["character"]
-            (GET "/show" []
+            (GET* "/show" []
                    :return Message
                    :query-params [text :- String]
                    :summary "return the character description"
