@@ -16,8 +16,8 @@
 (def examine-synonyms '("/ex" "/examine"))
 
 (defn form-response [text]
-  (json/write-str {:response_type "ephemeral"
-                   :text text}))
+  {:response_type "ephemeral"
+   :text text})
 
 (defn show [text-params]
     (if (some #{text-params} (keys context))
