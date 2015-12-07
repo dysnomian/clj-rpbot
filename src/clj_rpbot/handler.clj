@@ -18,21 +18,21 @@
              :description "returns a character's description"}]})
 
   (context* "/ping" []
-    (GET* "/" []
-      (ok {:ping "pong"})))
+            (GET* "/" []
+                  (ok {:ping "pong"})))
 
   (context* "/character" []
-    :tags ["character"]
-    (POST* "/show" []
-      :return Message
-      :body-params [text :- String]
-      :summary "return the character description"
-      (ok {:message (parser/show text)})))
+            :tags ["character"]
+            (GET "/show" []
+                   :return Message
+                   :query-params [text :- String]
+                   :summary "return the character description"
+                   (ok {:message (parser/show text)})))
 
   (context* "/user" []
-    :tags ["user"]
-    (GET* "/" []
-      :return Message
-      :query-params [name :- String]
-      :summary "say hello"
-      (ok {:message (str "Terve, " name)}))))
+            :tags ["user"]
+            (GET* "/" []
+                  :return Message
+                  :query-params [name :- String]
+                  :summary "say hello"
+                  (ok {:message (str "Terve, " name)}))))
