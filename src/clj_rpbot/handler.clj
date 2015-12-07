@@ -8,12 +8,12 @@
   {:formats [:json-kw]}
   (swagger-ui)
   (swagger-docs
-    {:info {:title "RP Bot API"
-            :description "Slackbot API for RP commands"}
-     :tags [{:name "ping",
-             :description "returns PONG"}
-            {:name "examine",
-             :description "returns a character's description"}]})
+   {:info {:title "RP Bot API"
+           :description "Slackbot API for RP commands"}
+    :tags [{:name "ping",
+            :description "returns PONG"}
+           {:name "examine",
+            :description "returns a character's description"}]})
 
   (context* "/ping" []
             (GET* "/" []
@@ -22,6 +22,6 @@
   (context* "/character" []
             :tags ["character"]
             (GET* "/show" []
-                   :summary "return the character description"
-                   :query-params [text :- String]
-                   (ok (parser/show text)))))
+                  :summary "return the character description"
+                  :query-params [text :- String]
+                  (ok (parser/show text)))))

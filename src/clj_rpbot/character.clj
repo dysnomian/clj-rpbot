@@ -4,11 +4,11 @@
             :user "l"
             :description "is a cute redhead"})
 (def andrea {:name "Andrea"
-            :user "a"
-            :description "is a cute pixie"})
+             :user "a"
+             :description "is a cute pixie"})
 (def kale {:name "Kale"
-            :user "t"
-            :description "is a cute cyborg boy"})
+           :user "t"
+           :description "is a cute cyborg boy"})
 (def kylie {:name "Kylie"
             :user "t"
             :description "is a cute cyborg girl"})

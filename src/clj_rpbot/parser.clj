@@ -20,6 +20,6 @@
    :text text})
 
 (defn show [text-params]
-    (if (some #{text-params} (keys context))
-      (form-response (character/show text-params))
-      (form-response "Huh? I don't know who you're trying to examine.")))
+  (if (some #{text-params} (keys context))
+    (form-response (character/show text-params))
+    (form-response "Huh? I don't know who you're trying to examine.")))
