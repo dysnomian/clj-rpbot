@@ -25,11 +25,3 @@
                    :summary "return the character description"
                    :query-params [text :- String]
                    (ok (parser/show text))))
-
-  (context* "/user" []
-            :tags ["user"]
-            (GET* "/" []
-                  :return Message
-                  :query-params [name :- String]
-                  :summary "say hello"
-                  (ok {:message (str "Terve, " name)}))))
