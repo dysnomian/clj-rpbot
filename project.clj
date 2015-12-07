@@ -7,7 +7,7 @@
                  [com.apa512/rethinkdb "0.11.0"]
                  [lein-dotenv "RELEASE"]]
   :min-lein-version "2.0.0"
-  :jvm-opts     ^:replace ["-Xss512k" "-Xms90m" "-Xmx100m"
+  :jvm-opts     ^:replace ["-Xss512k" "-Xms80m" "-Xmx100m"
                            "-XX:MaxMetaspaceSize=100m"
                            "-XX:MaxDirectMemorySize=40m"]
   :ring {:handler clj-rpbot.handler/app}
