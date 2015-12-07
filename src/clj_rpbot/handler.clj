@@ -4,7 +4,8 @@
             [schema.core :as s]
             [clj-rpbot.parser :as parser]))
 
-(s/defschema Message {:message String})
+(s/defschema Message {:response_type String
+                      :text String})
 
 (defapi app
   {:formats [:json-kw]}
@@ -27,7 +28,8 @@
                    :return Message
                    :query-params [text :- String]
                    :summary "return the character description"
-                   (ok {:message (parser/show text)})))
+                   (ok {:response_type "ephemeral"
+                        :text (parser/show text)})))
 
   (context* "/user" []
             :tags ["user"]
