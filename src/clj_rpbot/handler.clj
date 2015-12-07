@@ -24,4 +24,4 @@
             (GET* "/show" []
                    :summary "return the character description"
                    :query-params [text :- String]
-                   (ok (parser/show text))))
+                   (ok (parser/show text)))))
