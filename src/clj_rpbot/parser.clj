@@ -1,19 +1,7 @@
 (ns clj-rpbot.parser
-  (:require [clojure.data.json :as json]
-            [clj-rpbot.character :as character]))
-
-(def example-slack-request
-  {:user_name "liss"
-   :command "/ex"
-   :text "Andrea"})
-
-(def example-slack-response
-  (json/write-str {:response_type "ephemeral"
-                   :text "Andrea is a cute pink-haired pixie."}))
+  (:require [clj-rpbot.character :as character]))
 
 (def context character/characters)
-
-(def examine-synonyms '("/ex" "/examine"))
 
 (defn form-response [text]
   {:response_type "ephemeral"

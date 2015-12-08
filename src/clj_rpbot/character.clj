@@ -1,3 +1,5 @@
+;;(ns clj-rpbot.character
+;;  (:require [rethinkdb.query :as r]))
 (ns clj-rpbot.character)
 
 (def alice {:name "Alice"
